@@ -1,10 +1,10 @@
 pipeline {
     agent any
     options {
-        timeout(time: 1, unit: 'HOURS')
+        timeout(time: 1, unit: 'SECOND')
     }
     stages {
-        stage('Example') {
+        stage('trial') {
             steps {
                 echo 'Hello World'
             }
