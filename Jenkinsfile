@@ -28,7 +28,7 @@ pipeline {
             }
         }
 
-        stage('tfsec') {
+        stage('Static code Analysis') {
            agent {
              docker { 
                image 'tfsec/tfsec-ci:v0.57.1' 
