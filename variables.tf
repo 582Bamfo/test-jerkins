@@ -4,7 +4,7 @@ variable "name" {
 }
 
  variable "ami" {
-    default = "ami-0fc3317b37c1269d3"
+    default = "ami-0c1c30571d2dae5c9"
     type = string
     description = "ami for the new env"
  }
