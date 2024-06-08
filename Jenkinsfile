@@ -31,7 +31,7 @@ pipeline {
         stage('Install tfsec') {
             steps {
                 sh """
-                    curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install.sh | bash -s -- -b /usr/local/bin ${TFSEC_VERSION}
+                    curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install.sh 
                     tfsec --version
                 """
             }
