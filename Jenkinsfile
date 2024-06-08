@@ -27,5 +27,17 @@ pipeline {
                 sh 'terraform validate'
             }
         }
+
+        stage('planning') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+
+        stage('deploying to  dev ') {
+            steps {
+                sh 'terraform apply -auto-approve'
+            }
+        }
     }
 }
