@@ -28,6 +28,22 @@ pipeline {
             }
         }
 
+        stage('Install tfsec') {
+            steps {
+                sh """
+                    curl -s https://raw.githubusercontent.com/aquasecurity/tfsec/master/scripts/install.sh | bash -s -- -b /usr/local/bin ${TFSEC_VERSION}
+                    tfsec --version
+                """
+            }
+        }
+
+        stage('Terraform Security Scan') {
+            steps {
+                sh 'tfsec .'
+            }
+        }
+
+
         stage('planning') {
             steps {
                 sh 'terraform plan'
