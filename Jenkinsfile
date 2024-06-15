@@ -12,7 +12,7 @@ pipeline {
 
         stage('git checkout') {
             steps {
-                 git branch: 'main', url:'https://github.com/582Bamfo/test-jerkins.git'
+                 git branch: 'feature', url:'https://github.com/582Bamfo/test-jerkins.git'
             }
         }
 
