@@ -12,7 +12,7 @@ pipeline {
 
         stage('git checkout') {
             steps {
-                 git branch: 'feature', url:'https://github.com/582Bamfo/test-jerkins.git'
+                 git branch: 'main', url:'https://github.com/582Bamfo/test-jerkins.git'
             }
         }
 
@@ -34,10 +34,10 @@ pipeline {
             }
         }
 
-        // stage('deploying to  dev ') {
-        //     steps {
-        //         sh 'terraform destroy -auto-approve'
-        //     }
-        // }
+        stage('deploying to  dev ') {
+            steps {
+                sh 'terraform destroy -auto-approve'
+            }
+        }
     }
 }
