@@ -10,7 +10,7 @@ variable "name" {
  }
 
  variable "instance_type" {
-  default =  "t2.small"
+  default =  "t2.medium"
   type = string
 }
 
